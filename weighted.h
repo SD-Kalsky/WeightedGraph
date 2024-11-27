@@ -67,17 +67,17 @@ void order(){
         a=vertices[i-1];
         b=vertices[i];
         c=vertices[(i-2)/2];
-        if(b <= a) {
+        if(a <= b) {
           m = a;
           a = b;
           b = m;
         }
-        if(c <= b) {
-          m = b;
-          b = c;
+        if(c <= a) {
+          m = a;
+          a = c;
           c = m;
         }
-        if(b <= a) {
+        if(a <= b) {
           m = a;
           a = b;
           b = m;
@@ -106,7 +106,7 @@ void order(){
         a=vertices[i-1];
         b=vertices[i];
         c=vertices[(i-2)/2];
-        if(b > a) {
+        if(a > b) {
           m = a;
           a = b;
           b = m;
@@ -116,7 +116,7 @@ void order(){
           b = c;
           c = m;
         }
-        if(b > a) {
+        if(a > b) {
           m = a;
           a = b;
           b = m;
