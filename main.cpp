@@ -4,7 +4,7 @@
 using namespace std;
 
 int main() {
-  Weighted w(6);
+  PriorityQueue w(6);
   w.print();
   w.add(3);
   w.print();

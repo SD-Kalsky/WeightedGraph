@@ -12,8 +12,10 @@ using namespace std;
 int main() {
   char *motherchar = new char[2];
   int x0 = 450, y0 = 150;
-  Weighted w(35);
+  PriorityQueue w(12);
   w.print();
+
+  
   int i = 0, n=w.getSize();
   int *arr=w.getVertices();
   SetTargetFPS(TargetFPS);
