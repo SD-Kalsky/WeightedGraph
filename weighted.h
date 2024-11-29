@@ -158,8 +158,7 @@ void sort(){
     this->pop();
     i++;
   }
-  delete vertices;
-  vertices = nullptr;
+  destroy();
   vertices=arr;
   size=n;
 }
@@ -253,6 +252,9 @@ public:
     init();
     vertices[size - 1][1] = 0;
     vertices[0][2] = size - 1;
+  }
+  ~Weighted(){
+    destroy();
   }
   int get_size(){
     return size;
