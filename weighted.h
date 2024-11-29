@@ -150,6 +150,19 @@ void order(){
     }
 }
 
+void sort(){
+  int *arr=new int[size];
+  int i=0, n=size;
+  while(i<n){
+    arr[i]=this->getFirst();
+    this->pop();
+    i++;
+  }
+  delete vertices;
+  vertices = nullptr;
+  vertices=arr;
+  size=n;
+}
 void setType(bool b){
   type=b;
 }
@@ -574,5 +587,23 @@ public:
       cout<<endl;
       i++;
     }
-  } 
+  }
+  PriorityQueue toPyramid(){
+    PriorityQueue pq(0);
+    int i=0;
+    while(i<size){
+      int j=1;
+      int min;
+      if(vertices[i][0]>1){
+        min=1;
+      while(j<vertices[i][0]){
+        if(weights[vertices[i][j]]>weights[vertices[i][min]]) min=j;
+        j++;
+        }
+        pq.add(j);
+      }
+       i++;
+    }
+   return pq;
+  }
 };

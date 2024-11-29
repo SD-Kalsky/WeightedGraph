@@ -5,14 +5,15 @@ using namespace std;
 
 int main() {
   PriorityQueue w(6);
-  w.print();
   w.add(3);
-  w.print();
-  w.add(3);
-  w.print();
   w.add(7);
   w.print();
-  w.pop();
+  w.sort();
   w.print();
+
+  // Weighted w(5);
+  // PriorityQueue pq=w.toPyramid();
+  // pq.print();
+
   return 0;
 }

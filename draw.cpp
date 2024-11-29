@@ -12,10 +12,12 @@ using namespace std;
 int main() {
   char *motherchar = new char[2];
   int x0 = 450, y0 = 150;
-  PriorityQueue w(12);
+  PriorityQueue w(16);
+  w.add(32);
+  w.pop();
   w.print();
 
-  
+
   int i = 0, n=w.getSize();
   int *arr=w.getVertices();
   SetTargetFPS(TargetFPS);
